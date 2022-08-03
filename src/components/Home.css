@@ -1,0 +1,28 @@
+#divCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    row-gap: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    }
+    
+    
+    input{
+        width: 30%;
+    }
+    
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Josefin Sans', cursive;
+        background-color: rgb(222, 221, 221);
+    }
+    
+    .atr{
+        color: black;
+    }
+
+    

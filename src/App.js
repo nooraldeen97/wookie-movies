@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Home from './components/home';
+import Home from './components/Home';
 import Details from './components/Details';
 
 function App() {
