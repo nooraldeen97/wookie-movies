@@ -8,7 +8,7 @@ function Header(props) {
         <>
             <Navbar bg="danger" variant="light" id="header" expand="md">
                 <Container>
-                    <Navbar.Brand href="#home" >
+                    <Navbar.Brand href="/" >
                     WOOKIE <br></br> MOVIES</Navbar.Brand>
                     <FaSearch className="icon"/>
             <input type="text" onChange={props.searchHandler} placeholder='search about movie' value={props.searchValue}/>
