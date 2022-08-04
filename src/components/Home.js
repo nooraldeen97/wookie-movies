@@ -7,6 +7,7 @@ import { Col,Row} from "react-bootstrap";
 import Header from './Header';
 import { Link } from "react-router-dom";
 import env from "react-dotenv";
+import Category from './Category';
 
 function Home() {
 
@@ -32,8 +33,6 @@ function Home() {
             
         }
         
-        
-
     const searchHandler =(e)=> {
         console.log(searchValue);
             setSearchValue(e.target.value);
@@ -41,13 +40,14 @@ function Home() {
     }
 
     function updateFilteredArr(){
+        if(searchValue!="" && searchValue!=" "){
         axios.get(`https://wookie.codesubmit.io/movies?q=${searchValue}`, {
             headers: {
               'Authorization': `Bearer ${token}`
             }
           }).then(result => {
             setFilteredArr(result.data.movies);
-            })
+            })}
     }
 
 
@@ -57,7 +57,7 @@ function Home() {
 
            <Container fluids>
             <Row>
-                {
+            {
                     filteredArr.length? filteredArr.map(elem => {
                         return <Row  className={styleCardDiv}>
                                   <Link to={`/movie/${elem.id}`}style={{ textDecoration: 'none'}} >
@@ -65,17 +65,16 @@ function Home() {
                                   </Link>
                               </Row>  
                         
-                    }) :  
-                    arr.map(elem => {
-                        return <Row  className={styleCardDiv}>
-                                     
-                                 <Link to={`/movie/${elem.id}`}style={{ textDecoration: 'none'}} >
-                                     <HomeCard elem={elem} />   
-                                 </Link>
-                             </Row>
-                             
-                    })
+                    }) :(filteredArr.length==0 && searchValue!=""?
+                    <h1>does not exist</h1>:
+                    <>
+                    <Category arr={arr} genres="Action"/>
+                    <Category arr={arr} genres="Crime" />
+                    <Category arr={arr} genres="Drama" />
+                    <Category arr={arr} genres="Adventure" />
+                    </>)
                 }
+                
                 </Row>
                 </Container>
         </>
