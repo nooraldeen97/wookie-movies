@@ -15,9 +15,11 @@ function Header(props) {
                 <Container>
                     <Navbar.Brand href="/" >
                     WOOKIE <br></br> MOVIES</Navbar.Brand>
+                    <div className="searchDiv">
                     <FaSearch className="icon"/>
-            <input type="text" onChange={props.searchHandler} placeholder='search about movie' value={props.searchValue}/>
-            <button onClick={removeToken}>logOut</button>
+                    <input type="text" className="search-bar" onChange={props.searchHandler} placeholder='search about movie' value={props.searchValue}/>
+                    </div>
+            <button class="custom-btn btn-16" onClick={removeToken}>log Out</button>
                 </Container>
             </Navbar>
         </>
