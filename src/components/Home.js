@@ -1,7 +1,7 @@
+import "./Home.css";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import HomeCard from './HomeCard';
-import "./Home.css";
 import { Container } from 'react-bootstrap';
 import { Col,Row} from "react-bootstrap";
 import Header from './Header';
