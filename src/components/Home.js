@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import env from "react-dotenv";
 import Category from './Category';
 
-function Home() {
+function Home(props) {
 
     const [arr, setArr] = useState([]);
     const [filteredArr, setFilteredArr] = useState([]);
@@ -53,7 +53,10 @@ function Home() {
 
     return (
         <>
-           <Header searchHandler={searchHandler} searchValue={searchValue}/>
+           <Header searchHandler={searchHandler} 
+                   searchValue={searchValue}
+                   signOutHandler={props.signOutHandler}
+                   />
 
            <Container fluids>
             <Row>
