@@ -19,11 +19,17 @@
         flex-direction: column;
         font-family: 'Josefin Sans', cursive;
         background-color: #E5B299;
-        /* #E5B299 */
     }
     
     .atr{
         color: black;
     }
 
+
+    #spinner{
+    position: absolute;
+    left: 45%;
+    top: 250px;
+    
+    }
     
