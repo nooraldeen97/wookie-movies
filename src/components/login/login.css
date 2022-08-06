@@ -6,7 +6,7 @@
 .cont {
   font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #404040;
-	background-image:url('https://unsplash.s3.amazonaws.com/batch%206/park-place.jpg');
+	background-image:url('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -22,7 +22,7 @@
 
 .sign-up {
   position: relative;
-  margin: 40px auto;
+  margin: 180px auto;
   width: 280px;
   padding: 33px 25px 29px;
   background: white;
@@ -159,4 +159,12 @@ input {
 ::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+#h3Element{
+  text-align: center;
+  font-family: unset;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  font-size: 20px;
 }

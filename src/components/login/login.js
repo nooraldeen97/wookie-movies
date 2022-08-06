@@ -40,7 +40,7 @@ function Login() {
     {/* <input type="text" class="sign-up-input" placeholder="What's your username?" autofocus/>
     <input type="password" class="sign-up-input" placeholder="Choose a password"/> */}
     {/* <input type="submit" id="signInDiv" value="Sign me up!" /> */}
-    <h3>Sign in By google account</h3>
+    <h3 id="h3Element">Sign in by Google account</h3>
         <div id="signInDiv"></div>
       </form>
     </body>

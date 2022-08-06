@@ -1,13 +1,13 @@
 import "./Home.css";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import HomeCard from './HomeCard';
+import HomeCard from '../HomeCard';
 import { Container } from 'react-bootstrap';
 import { Col,Row} from "react-bootstrap";
-import Header from './Header';
+import Header from '../Header/Header';
 import { Link } from "react-router-dom";
 import env from "react-dotenv";
-import Category from './Category';
+import Category from '../Category';
 
 function Home(props) {
 

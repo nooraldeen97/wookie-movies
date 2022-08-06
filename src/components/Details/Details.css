@@ -175,3 +175,32 @@ li p {
 		margin-left: 33px;
 	}
 }
+
+#backBtn{
+	text-decoration: none;
+	color:black ;
+	position: absolute;
+	right: 10px;
+
+}
+
+#backBtn:hover{
+	color: wheat;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+.title{
+	font-size: 30px;
+}
+
+#rateDiv{
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+	#rateDiv{
+		display: block;
+	}
+}

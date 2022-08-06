@@ -11,7 +11,7 @@ function HomeCard(props) {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={props.elem.poster} />
                 <Card.Body>
-                    <Card.Title>{props.elem.title}</Card.Title>
+                    <Card.Title style={{color:"gray"}}>{props.elem.title}</Card.Title>
                 </Card.Body>
             </Card>
         </Col>

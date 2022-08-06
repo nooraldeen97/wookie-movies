@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import Login from './components/login/login.js';
-import Details from './components/Details';
+import Details from './components/Details/Details';
 import React, { useEffect ,useState} from 'react';
 import { useCookies } from "react-cookie";
 
@@ -17,9 +17,7 @@ function App() {
   },[])
 
   function signOutHandler(){
-    console.log("here we gooooooooooo");
     removeCookie("token",{path:"/"});
-    console.log(cookies);
 }
   return (
     <BrowserRouter>
