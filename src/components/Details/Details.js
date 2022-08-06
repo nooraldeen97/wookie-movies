@@ -1,51 +1,37 @@
-import axios from 'axios';
 import "./Details.css";
-import React, { useState, useEffect } from 'react';
-import {
-  useParams
-} from "react-router-dom";
+import React, { useContext, useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import { FaCaretLeft } from "react-icons/fa";
-import env from "react-dotenv";
 import Header from '../Header/Header';
 import Stars from './Stars';
+import { dataContext } from "../../contexts/dataContext";
 
 
 
 
 function Details() {
 
+
   const { id } = useParams();
-  console.log(id)
-  const token = process.env.REACT_APP_TOKEN;
-  const [arr, setArr] = useState([]);
+  const { arr, setArr } = useContext(dataContext);
   const [filteredArr, setFilteredArr] = useState([]);
   useEffect(getData, []);
   useEffect(handleDetails, [arr]);
 
+
   function handleDetails() {
     const filteredArr = arr.filter(movie => {
-      console.log(movie.id)
-
       return movie.id == id;
     })
-    console.log(filteredArr);
     setFilteredArr(filteredArr);
   }
 
 
-
   function getData() {
-
-    axios.get('https://wookie.codesubmit.io/movies', {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    }).then(result => {
-      setArr(result.data.movies);
-    })
-
+    setArr(arr);
   }
-  
+
+
   return (
     <>
       <Header page="Details" />
@@ -59,8 +45,8 @@ function Details() {
 
         <div class="profile_desc_section">
           <div id='rateDiv'>
-          <h2 className='title'>{filteredArr.length ? filteredArr[0].title : "title"} <span>({filteredArr.length ? filteredArr[0].imdb_rating : "rating"})</span></h2>
-          <Stars starNum={filteredArr.length?filteredArr[0].imdb_rating:""}/>
+            <h2 className='title'>{filteredArr.length ? filteredArr[0].title : "title"} <span>({filteredArr.length ? filteredArr[0].imdb_rating : "rating"})</span></h2>
+            <Stars starNum={filteredArr.length ? filteredArr[0].imdb_rating : ""} />
           </div>
 
           <div class="interests">
