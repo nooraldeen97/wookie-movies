@@ -51,9 +51,7 @@ function Home(props) {
 
 
     const searchHandler = (e) => {
-        console.log(searchValue);
         setSearchValue(e.target.value);
-
     }
 
 

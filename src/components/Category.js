@@ -10,8 +10,6 @@ function Category(props) {
 
     return (
         <>
-            {/* <h2>{props.genres}</h2>
-            <hr></hr> */}
             <hr></hr>
             <div className="d-grid gap-2">
                 <Button variant="secondary" className="btn-danger" size="lg">

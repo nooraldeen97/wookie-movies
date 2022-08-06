@@ -16,14 +16,13 @@ This project was generated with [React](https://reactjs.org/docs/getting-started
 
 ### **_Features Implemented_**
 
-- Interceptors (JWTInterceptor to handle the token in headers for each http Request to implement authentication )
-- Caching (CachingInterceptor is created to cache the server side url and response to avoid multiple api calls)
+- Google authentication used so the user is able to login by google account and the token saved in the cookies . 
+- ContextApi ( created to share the data that come from api to avoid multiple api calls and to accelerate the response)
 - Pipes (Custom FilterPipe is created to filter images based on group like Action, Drama etc.,)
-- Rating (WookieMovieRatingComponent is used to display rating of the movie)
-- Search (WookieMovieSearchComponent is used to search the movie typed by the user in the search bar)
+- Rating (Stars Component is used to display rating of the movie)
+- Search (Search Component is used to search the movie typed by the user in the search bar)
 - Rest API - GET call Integration
-- FlexLayout is used for Displaying of Movies in the landing page
-- Bootstrap is used for Search template 
+- Bootstrap is used for home page styling. 
 
 
 ## To run the project
