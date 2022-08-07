@@ -1,4 +1,5 @@
-import HomeCard from './HomeCard';
+import HomeCard from '../HomeCard';
+import "./category.css"
 import { Button, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -10,11 +11,8 @@ function Category(props) {
 
     return (
         <>
-            <hr></hr>
             <div className="d-grid gap-2">
-                <Button variant="secondary" className="btn-danger" size="lg">
-                {props.genres}
-                </Button>
+                <p id="geners">{props.genres}</p>
                 </div>
                 <br></br>
                 {

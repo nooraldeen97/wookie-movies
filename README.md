@@ -18,11 +18,13 @@ This project was generated with [React](https://reactjs.org/docs/getting-started
 
 - Google authentication used so the user is able to login by google account and the token saved in the cookies . 
 - ContextApi ( created to share the data that come from api to avoid multiple api calls and to accelerate the response)
-- Pipes (Custom FilterPipe is created to filter images based on group like Action, Drama etc.,)
+- spinner (it done on the home page to show loading page until getting the data from API)
+- categories (category component is created to filter images based on group like Action, Drama etc.,)
 - Rating (Stars Component is used to display rating of the movie)
-- Search (Search Component is used to search the movie typed by the user in the search bar)
+- Search (Search is used to search the movie typed by the user in the search bar)
 - Rest API - GET call Integration
 - Bootstrap is used for home page styling. 
+- tests using jest library.
 
 
 ## To run the project

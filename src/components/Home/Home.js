@@ -7,7 +7,7 @@ import { Row } from "react-bootstrap";
 import Header from '../Header/Header';
 import { Link } from "react-router-dom";
 import env from "react-dotenv";
-import Category from '../Category';
+import Category from '../category/Category';
 import BounceLoader from "react-spinners/BounceLoader";
 import {dataContext} from "../../contexts/dataContext";
 
@@ -75,8 +75,9 @@ function Home(props) {
                                     </Link>
                                 </Row>
 
-                            }) : (filteredArr.length == 0 && searchValue != "" ?
-                                <h1>does not exist</h1> :
+                            })
+                             : (filteredArr.length == 0 && searchValue != "" ?
+                                <h1>There is no such movie name ! please enter a valid movie name </h1> :
                                 <>
                                     <Category arr={arr} genres="Action" />
                                     <Category arr={arr} genres="Crime" />
